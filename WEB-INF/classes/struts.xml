@@ -1,0 +1,169 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="usuarioaction" extends="struts-default">
+		
+			<action name="usuario.cadastrar"
+					class="control.UsuarioAction"
+					method="cadastrar">
+					<result name="success">/cadastro.jsp</result>		
+			</action>
+		
+			<action name="usuario.consultar"
+					class="control.UsuarioAction"
+					method="consultar">
+					<result name="success">/consultar.jsp</result>		
+			</action>
+			
+			<action name="usuario.consultarDados"
+					class="control.UsuarioAction"
+					method="consultarDados">
+					<result name="success">/alterar.jsp</result>		
+			</action>
+			
+			<action name="usuario.alterar"
+					class="control.UsuarioAction"
+					method="alterar">
+					<result name="success">/alterar.jsp</result>		
+			</action>
+			
+			<action name="usuario.excluir"
+					class="control.UsuarioAction"
+					method="excluir">
+					<result name="success">/consultar.jsp</result>		
+			</action>
+			
+			<action name="usuario.logar"
+					class="control.UsuarioAction"
+					method="logar">
+					<result name="success">/login.jsp</result>		
+			</action>
+			
+		</package>
+	
+		<package name="enderecoaction" extends="struts-default">
+	
+			<action name="endereco.cadastrar"
+				class="control.EnderecoAction"
+				method="cadastrar">
+				<result name="success">/cadastro.jsp</result>			
+			</action>
+			
+			<action name="endereco.consultar"
+				class="control.EnderecoAction"
+				method="consultar">
+				<result name="success">/cadastro.jsp</result>			
+			</action>
+	
+		</package>
+		
+		<package name="usuarioenderecoaction" extends="struts-default">
+	
+			<action name="usuarioendereco.cadastrar"
+				class="control.UsuarioEnderecoAction"
+				method="cadastrar">
+				<result name="success">/cadastro.jsp</result>			
+			</action>
+			
+			<action name="usuarioendereco.consultar"
+					class="control.UsuarioEnderecoAction"
+					method="consultar">
+					<result name="success">/consultar.jsp</result>		
+			</action>
+			
+			<action name="usuarioendereco.consultarTodos"
+					class="control.UsuarioEnderecoAction"
+					method="consultarTodos">
+					<result name="success">/consultar.jsp</result>		
+			</action>
+	
+			<action name="usuarioendereco.alterar"
+					class="control.UsuarioEnderecoAction"
+					method="alterar">
+					<result name="success">/cadastro.jsp</result>		
+			</action>
+			
+						
+			<action name="usuarioendereco.consultarDados"
+					class="control.UsuarioEnderecoAction"
+					method="consultarDados">
+					<result name="success">/alterar.jsp</result>		
+			</action>
+			
+			<action name="usuarioendereco.excluir"
+					class="control.UsuarioEnderecoAction"
+					method="excluir">
+					<result name="success">/consultar.jsp</result>		
+			</action>
+			
+		</package>
+		
+		
+		<package name="logar" extends="struts-default">
+		
+			<action name="logar.logar"
+					class="control.LoginAction"
+					method="logar">
+					<result name="success">/consultar.jsp</result>	
+					<result name="error">/login.jsp</result>		
+			</action>
+			
+			<action name="logar.logout"
+					class="control.LoginAction"
+					method="logout">
+					<result name="success">/nocache.jsp</result>		
+			</action>
+		
+		</package>
+		
+		
+		<package name="noticia" extends="struts-default">
+		
+			<action name="noticia.cadastrar"
+					class="control.NoticiaAction"
+					method="cadastrar">
+					<result name="success">/noticia.jsp</result>	
+			</action>
+			
+			<action name="noticia.alterar"
+					class="control.NoticiaAction"
+					method="alterar">
+					<result name="success">/buscanoticia.jsp</result>		
+			</action>
+		
+			<action name="noticia.excluir"
+					class="control.NoticiaAction"
+					method="excluir">
+					<result name="success">/buscanoticia.jsp</result>		
+			</action>
+			
+			<action name="noticia.listar"
+					class="control.NoticiaAction"
+					method="listar">
+					<result name="success">/buscanoticia.jsp</result>		
+			</action>	
+		
+		</package>
+		
+		
+		<package name="agenda" extends="struts-default">
+		
+			<action name="agenda.cadastrar" class="control.AgendaAction" method="cadastrar">
+					<result name="success">/agenda.jsp</result>	
+			</action>
+			
+			<action name="agenda.listar" class="control.AgendaAction" method="listar">
+					<result name="success">/buscaagenda.jsp</result>		
+			</action>	
+			
+			<action name="gerarCalendario" class="control.AgendaAction" method="gerandoCalendario">
+					<result name="success">/agenda2.jsp</result>		
+			</action>	
+		
+		</package>
+	
+	
+</struts>
